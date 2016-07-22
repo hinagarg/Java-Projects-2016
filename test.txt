@@ -1,0 +1,15 @@
+git Commands:
+
+
+Using git:
+	
+	Download and Install Git
+	Set the global parameters like	userName,email and Editor
+	create a Directory
+	call git init and initialize the directory
+	git add and the stage file
+	git status and check the status
+
+	Git uses the staging and commit
+	First the file is staged and then its committed
+	

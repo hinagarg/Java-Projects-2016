@@ -12,4 +12,13 @@ Using git:
 
 	Git uses the staging and commit
 	First the file is staged and then its committed
+	git gives the log messages
+	
+REquest 01
+
+	As per the Request 101 from RAMESH adding the following lines
+
+
+	git clone is used to clone the project
+	Master ......
 	

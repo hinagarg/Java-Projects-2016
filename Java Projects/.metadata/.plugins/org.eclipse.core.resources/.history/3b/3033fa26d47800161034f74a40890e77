@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.training.entity;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Training {
+  
+  private int trainingCode;
+  private String trainerName;
+  
+  private Set<Participant> 
+}

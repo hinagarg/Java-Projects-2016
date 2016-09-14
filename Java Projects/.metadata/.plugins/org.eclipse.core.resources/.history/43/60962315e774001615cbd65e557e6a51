@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package coom.training.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+
+import coom.training.entity.ServiceRequest;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ServiceRequestController {
+  
+  @Autowired
+  public ModelAndView mdlView;
+  
+  @Autowired
+  public ServiceRequest serviceRequest;
+  
+}

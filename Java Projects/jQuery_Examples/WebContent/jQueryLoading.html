@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset = "ISO-8859-1">
+<title>
+Understand jQuery Loading
+</title>
+<script type="text/javascript" src = "Scripts/jquery.js"></script>
+<script type="text/javascript">
+
+/*window.onload = function(){
+	
+	alert("ON Load - 1 called");
+}
+
+window.onload = function(){
+	  
+	  alert("ON Load - 2 called");
+	}
+	
+	
+$(function(){
+	 alert("Document Ready - 1 Called");
+});
+
+$(function(){
+	   alert("Document Ready - 2 Called");
+	});
+*/	
+$(function(){
+    $("#target").html("Event Handling with jQuery");
+    
+    $("h1").css('text-align', 'center');
+    
+    $("div").addClass('style1');
+ });
+
+</script>
+<style type="text/css">
+.style1{
+text-align:center;
+color:red;
+font-size:1.3em;
+font-family:Arial;
+}
+</style>
+</head>
+<body>
+<h1>JQuery Examples</h1>
+<div id = "target"></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package org.services.daos;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ShoppingCartDaoImpl {
+
+}

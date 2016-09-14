@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package org.services.entity;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ShoppingCart {
+
+}

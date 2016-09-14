@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package com.training.app;
+
+import com.training.daos.CarDaoImpl;
+import com.training.doamins.Address;
+import com.training.entity.Car;
+import com.training.ifaces.MyDao;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  
+    MyDao obj = new MyDao();
+    
+    Car carObj = new Car("2345", "Ramesh");
+    
+    Address resiAddr = new Address("Gandhi Street", "RaviNagar", "60098");
+    
+    Address officeAddr = new Address("Tilak Street", "Indira Puri", "65437");
+    
+    carObj.setOffcieAddress(officeAddr);
+    
+    carObj.setResiAddress(resiAddr);
+    
+    CarDaoImpl dao = new CarDaoImpl();
+    
+    String key = (String)dao.add(carObj);
+    
+    System.out.println("1 Record with Key " + key + " added"); 
+    
+    Car foundCar = obj.find("TN22AW8220");
+    
+    System.out.println(foundCar.getOffcieAddress());
+    
+  
+  }
+
+}

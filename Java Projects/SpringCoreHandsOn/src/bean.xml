@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "customerBean1" class = "com.training.domains.Customer" lazy-init="default"> 
+<property name="customerId" value="101"></property>
+<property name="customerName" value = "Jay"></property>
+<property name="customerAddress" value = "Chicago"></property>
+</bean>
+
+<!-- Setter Dependency using Namespace -->
+<bean id = "invBean1" class = "com.training.domains.Invoice" p:inoiveNumber="10200" 
+p:amount = "300.00"  p:cust-ref = "customerBean1" />
+
+
+<!-- Constructor Dependency using NameSpace -->
+<bean id = "custBean2" class = "com.training.domains.Customer" c:customerId = "102" c:customerName = "Jay"  c:customerAddress="Chicago" />
+
+<!-- Constructor Dependency by Name -->
+<bean id = "custBean3" class = "com.training.domains.Customer">
+  <constructor-arg name = "customerId" value = "103"></constructor-arg>
+  <constructor-arg name = "customerName" value = "Blake"></constructor-arg>
+  <constructor-arg name = "customerAddress" value = "Michigan"></constructor-arg>
+
+</bean>
+
+<!-- Setter Dependency using Namespace -->
+<bean id = "itemBean1" class = "com.training.domains.Item" p:itemName="item1" 
+p:itemNumber = "1"/>
+
+<!-- Constructor Dependency by Name -->
+<bean id = "itemBean2" class = "com.training.domains.Item">
+  <constructor-arg name = "itemName" value = "test2"></constructor-arg>
+  <constructor-arg name = "itemNumber" value = "2"></constructor-arg>
+</bean>
+
+<!-- Collection Dependency Injection -->
+<bean id = "invBean2" class = "com.training.domains.Invoice" p:inoiveNumber="10203" 
+p:amount = "5000" p:cust-ref="customerBean1">
+<property name = "itemList">
+  <list value-type = "com.training.domains.Item">
+    <ref bean = "itemBean1"></ref>
+    <ref bean = "itemBean2"></ref>
+</list>
+
+</property>
+</bean>
+
+</beans>

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package coom.training.entity;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class RequestController {
+
+}

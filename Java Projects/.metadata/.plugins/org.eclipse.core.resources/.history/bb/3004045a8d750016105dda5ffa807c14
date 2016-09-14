@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.training.controllers;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * @author hgarg1
+ *
+ */
+@Controller
+public class StudentController {
+  
+  @RequestMapping(value = "/getStudentDetails", method = RequestMethod.GET)
+  public String findStudent(@RequestParam("rollnumber") int rollNumber) throws Exception
+  {
+  
+    String nextStep = "StudentDetails";
+    
+    if(rollNumber > 1000 || rollNumber <= 0)
+    {
+      
+      throw new Exception("Roll Number range 1-1000");
+    }
+    
+    return nextStep;
+  }
+  
+  public String errorHandler(HttpServletRequest req, Exception ex, Model mdl)
+  {
+  
+    mdl.addAttribute("cause", ex.getMessage());
+    mdl.addAttribute("exceptionClass", ex.getClass());
+    mdl.addAttribute("requestURI", req.getRequestURI());
+    
+    return "Bugs";
+  }
+}

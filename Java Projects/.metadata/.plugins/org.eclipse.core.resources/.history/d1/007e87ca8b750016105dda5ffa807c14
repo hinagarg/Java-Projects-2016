@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package com.training.controllers;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.ui.Model;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class StudentController {
+
+  public String findStudent(int rollNumber) throws Exception
+  {
+  
+    String nextStep = "StudentDetails";
+    
+    if(rollNumber > 1000 || rollNumber <= 0)
+    {
+      
+      throw new Exception("Roll Number range 1-1000");
+    }
+    
+    return nextStep;
+  }
+  
+  public String errorHandler(HttpServletRequest req, Exception ex, Model mdl)
+  {
+  
+    mdl.addAttribute("cause", ex.getMessage());
+    mdl.addAttribute("exceptionClass", ex.getClass());
+    mdl.addAttribute("requestURI", req.getRequestURI());
+    
+    return "Bugs";
+  }
+}

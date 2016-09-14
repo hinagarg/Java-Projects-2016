@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.training.domain;
+
+import com.training.entity.Car;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  
+    Car carObj = new Car("2345", "Ramesh");
+    CarDaoImpl dao = new CarDaoImple();
+    
+    
+  
+  
+  }
+
+}

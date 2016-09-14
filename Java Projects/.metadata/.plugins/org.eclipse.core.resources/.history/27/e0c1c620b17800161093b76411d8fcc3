@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.training.ifaces;
+
+/**
+ * @author hgarg1
+ *
+ */
+public interface MyDao {
+
+}

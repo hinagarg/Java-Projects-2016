@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Participant.hbm.xml, Training.hbm.xml&apos; to &apos;resources&apos;" description="Move 2 resources to &apos;resources&apos;" destination="src/main/resources" element1="src/main/java/com/training/entity/Participant.hbm.xml" element2="src/main/java/com/training/entity/Training.hbm.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1473676645657" updateReferences="true"/>
+</session>

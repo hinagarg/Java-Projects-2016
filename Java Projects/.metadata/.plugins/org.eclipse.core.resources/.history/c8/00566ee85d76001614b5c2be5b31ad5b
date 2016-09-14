@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SpringBootMVCWithJSP">
+        <property name="context-root" value="SpringBootMVC"/>
+        <property name="java-output-path" value="/SpringBootMVCWithJSP/target/classes"/>
+    </wb-module>
+</project-modules>

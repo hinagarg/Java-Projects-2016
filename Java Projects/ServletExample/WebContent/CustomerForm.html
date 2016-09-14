@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script   src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script type = "text/javascript">
+
+$(function(){
+
+$("#email").on('blur', function(){ 
+  
+var phoneNumber = $("#phoneNumber").val();
+
+var url= 'FindDueServlet';
+$.get(url,{'phoneNumber':phoneNumber}, function(response){
+	
+	$('#amount_due').val(response);
+});
+
+});
+
+});
+
+</script>
+</head>
+<body>
+<datalist id = "numbers">
+<option>9887654567</option>
+<option>9037654567</option>
+<option>96757654567</option>
+<option>9234654567</option>
+</datalist>
+<form action="FindDueServlet" method="post">
+<label>Mobile Number</label>
+<INPUT type="text" name="phoneNumber"  id = "phoneNumber" required = "required" placeholder = "enter 10 digit mob num." list = "numbers"/>
+<label id = "label-1">Email-id</label>
+<INPUT type="email" name="email" multiple = "multiple" required = "required" id = "email"/>
+<INPUT type="text" name="amount_due" id = "amount_due" readonly = "readonly"/>
+<input type="submit" value="Find"/>
+</form>
+
+
+</body>
+</html>

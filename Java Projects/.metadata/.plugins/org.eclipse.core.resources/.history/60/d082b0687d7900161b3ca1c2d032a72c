@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.training.apps;
+
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.domain.Project;
+
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    
+    try(ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");) {
+    
+    
+      Project projectBean = (Project) ctx.getBean("projBean1", Project.class);
+
+    
+      System.out.println("Bean returned by IOC Container" + projectBean);
+    
+     }
+    catch(Exception e){
+    
+      e.printStackTrace();
+    }
+   }
+
+ }
+
+

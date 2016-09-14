@@ -1,0 +1,101 @@
+<!Doctype>
+<html>
+<head>
+<meta charset = "ISO-8859-1">
+<title>Using Core Ajax</title>
+<link href = "images/ajax.png" rel = "icon">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script type="text/javascript">
+stateArray = [];
+capitalArray = [];
+stateCapitalArray = [];
+req = new XMLHttpRequest();
+function getData(){	
+	
+	var queryString = "http://services.groupkt.com/state/get/IND/all";
+	
+	req.open('GET', queryString, true);
+	
+	req.onreadystatechange = processRequest;
+	
+	req.send(null);
+}
+
+function processRequest() {
+	if (req.status == 200 && req.readyState == 4) {
+	 
+		var data =req.responseText;
+		var jsonobj = JSON.parse(data)["RestResponse"]["result"];
+		for(idx in jsonobj){
+			stateArray.push(jsonobj[idx].name);
+			capitalArray.push(jsonobj[idx].capital)
+		}
+		
+		console.log(capitalArray);
+		for(idx in stateArray){
+			stateArray[idx].prop = capitalArray[idx];
+		}
+		console.log(stateArray);
+		createStateElements(stateArray, capitalArray); 
+	}
+}
+
+
+function createStateElements(stateArray = [], capitalArray = []){
+	console.log(stateArray);
+	var myDiv = document.getElementById("state_name");
+	var selectList1 = document.createElement("select");
+	selectList1.setAttribute("id","state_name_select");
+	
+	myDiv.appendChild(selectList1);
+	
+	//Create and append the options
+	for (var i = 0; i < stateArray.length; i++) {
+	    var option1 = document.createElement("option");
+	    option1.value = stateArray[i];
+	    option1.text = stateArray[i];
+	    selectList1.appendChild(option1);
+	    
+	}
+	$(function(){
+		  $("#state_name_select").on('change', function(e) {
+			  stateCode = $('#state_name_select').val();
+			  console.log(stateCode);
+			  getCapitalData(stateArray, capitalArray, stateCode);
+		   });
+		  });
+	
+	}
+
+function getCapitalData(stateArray, capitalArray, stateCode){
+	var idx = stateArray.indexOf(stateCode);	
+	targetField = document.getElementById("cap_name");
+	targetField.value = capitalArray[idx];
+}
+
+
+</script>
+</head>
+<body>
+<section>
+<form action = "">
+<fieldset>
+<legend>Core Ajax Example</legend>
+<label>State Name</label>
+<div id = "state_name">
+</div>
+<div>
+<label>Capital Name</label>
+<input type = "text" name = "cap_name" id = "cap_name">
+</div>
+<script type = "text/javascript">
+getData();
+</script>
+
+
+
+</fieldset>
+</form>
+</section>
+</body>
+</html>

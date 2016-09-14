@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.training.apps;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.training.entity.Participant;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+  
+  public static void main(String[] args){
+  
+    Participant part1 = new Participant(202, "Abhinav");
+    
+    Participant part2 = new Participant(303, "Kimesh");
+    
+    Set<Participant> list = new HashSet<Participant>();
+    
+    list.add(part1);
+    list.add(part2);
+  }
+}

@@ -1,0 +1,56 @@
+/**
+ * 
+ */
+package com.training.entity;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Car {
+
+  private String registerNumber;
+  private String ownerName;
+  /**
+   * 
+   */
+  public Car() {
+  super();
+  // TODO Auto-generated constructor stub
+  }
+  /**
+   * @param registerNumber
+   * @param ownerName
+   */
+  public Car(String registerNumber, String ownerName) {
+  super();
+  this.registerNumber = registerNumber;
+  this.ownerName = ownerName;
+  }
+  /**
+   * @return the registerNumber
+   */
+  public String getRegisterNumber() {
+  return registerNumber;
+  }
+  /**
+   * @param registerNumber the registerNumber to set
+   */
+  public void setRegisterNumber(String registerNumber) {
+  this.registerNumber = registerNumber;
+  }
+  /**
+   * @return the ownerName
+   */
+  public String getOwnerName() {
+  return ownerName;
+  }
+  /**
+   * @param ownerName the ownerName to set
+   */
+  public void setOwnerName(String ownerName) {
+  this.ownerName = ownerName;
+  }
+  
+  
+}

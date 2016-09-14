@@ -1,0 +1,14 @@
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.training</groupId>
+  <artifactId>HibernateCRUD</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>3.6.4.Final</version>
+    </dependency>
+  </dependencies>
+</project>

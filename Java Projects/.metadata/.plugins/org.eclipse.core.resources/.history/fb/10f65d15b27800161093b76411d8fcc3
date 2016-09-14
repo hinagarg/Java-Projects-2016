@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.training.daos;
+
+import com.training.ifaces.MyDao;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class CarDaoImpl implements MyDao<T> {
+
+}

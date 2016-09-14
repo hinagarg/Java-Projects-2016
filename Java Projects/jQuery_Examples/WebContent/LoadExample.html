@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type = "text/javascript" src = "Scripts/jquery.js"></script>
+<script type = "text/javascript">
+$(function(){
+	alert(2);
+	$('a').on('click', function (event){
+	 
+		event.preventDefault();
+		
+		var content = $(this).data('file');
+		
+		$("#target").load(content);
+	});
+});
+</script>
+</head>
+<body>
+<ul>
+<li><a href ="#" data-file = "jQuery.html #topic1">Overview</a></li>
+<li><a href ="#" data-file = "jQuery.html #topic2">Features</a></li>
+<li><a href ="#" data-file = "jQuery.html #topic3">Adding JQuery</a></li>
+</ul>
+  <div id='target'></div>
+</body>
+</html>

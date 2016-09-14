@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.training.entity;
+
+import java.util.Set;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Training {
+  
+  private int trainingCode;
+  private String trainerName;
+  
+  private Set<Participant> particpants;
+}

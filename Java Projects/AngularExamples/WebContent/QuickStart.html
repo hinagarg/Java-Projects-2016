@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+My First Angular Application
+</title>
+<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js></script> 
+<script type="text/javascript">
+var app = angular.module("quickStart",[]);
+</script>
+</head>
+
+<body>
+<div data-ng-app="quickStart">
+
+<div style = "text-align:center;">{{"Angular"+"Application"}}</div>
+<label>userName</label>
+<input type = "text" name ="userName" id = "usrName" data-ng-model="userName">
+<p  data-ng-bind = "userName"></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!-- Setter Dependency Injection -->
+  <bean id = "addrBean1" class = "com.training.domain.Address" lazy-init="default"> 
+    <property name = "addressLine1" value = "540 E"></property>
+    <property name="addressLine2" value = "Roscoe St."></property>
+    <property name="cityName" value = "Chicago"></property>
+    <property name="pinCode" value = "60765"></property>
+  </bean>
+  
+  <bean id = "addrBean2" class = "com.training.domain.Address" lazy-init="default"> 
+    <property name = "addressLine1" value = "590 W"></property>
+    <property name="addressLine2" value = "Lasale St."></property>
+    <property name="cityName" value = "Chicago"></property>
+    <property name="pinCode" value = "60654"></property>
+  </bean>
+  
+  <bean id = "addrBean3" class = "com.training.domain.Address" lazy-init="default"> 
+    <property name = "addressLine1" value = "589 E"></property>
+    <property name="addressLine2" value = "Michigan Av."></property>
+    <property name="cityName" value = "Chicago"></property>
+    <property name="pinCode" value = "60876"></property>
+  </bean>
+
+  <!-- Constructor Dependency by Name -->
+  <bean id = "donorBean1" class = "com.training.domain.Donor">
+    <constructor-arg name = "donorName" value = "Jhon"></constructor-arg>
+    <constructor-arg name = "email" value = "jhon@example.com"></constructor-arg>
+    <constructor-arg name = "handPhone" value = "324567432"></constructor-arg>
+    <constructor-arg name = "address"  ref="addrBean1"></constructor-arg>
+  </bean>
+  
+  <bean id = "donorBean2" class = "com.training.domain.Donor">
+    <constructor-arg name = "donorName" value = "Max"></constructor-arg>
+    <constructor-arg name = "email" value = "max@example.com"></constructor-arg>
+    <constructor-arg name = "handPhone" value = "765432876"></constructor-arg>
+    <constructor-arg name = "address"  ref="addrBean2"></constructor-arg>
+  </bean>
+  
+  <bean id = "donorBean3" class = "com.training.domain.Donor">
+    <constructor-arg name = "donorName" value = "Blake"></constructor-arg>
+    <constructor-arg name = "email" value = "blake@example.com"></constructor-arg>
+    <constructor-arg name = "handPhone" value = "765432567"></constructor-arg>
+    <constructor-arg name = "address"  ref="addrBean3"></constructor-arg>
+  </bean>
+  
+  <!-- Collection Dependency Injection -->
+  <bean id = "projBean1" class = "com.training.domain.Project" p:projectId="101" 
+  p:projectName = "CancerCure" p:projectBudget="60,000" p:amountCollected=20000.00>
+  <property name = "donorList">
+    <list value-type = "com.training.domain.Donor">
+      <ref bean = "donorBean1"></ref>
+      <ref bean = "donorBean2"></ref>
+      <ref bean = "donorBean3"></ref>
+    </list>
+  </property>
+  </bean>
+  
+  </beans>

@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package coom.training.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.training.dao.ServiceRequestDao;
+import com.training.daos.CustomerDao;
+
+import coom.training.entity.ServiceRequest;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ServiceRequestController {
+  
+  
+  @Autowired
+  public ModelAndView mdlView;
+  
+  @Autowired
+  public ServiceRequest serviceRequest;
+  
+  @Autowired
+  private ServiceRequestDao serviceRequestDao;
+  
+  @RequestMapping(method = RequestMethod.GET)
+  public ModelAndView initForm(){
+  
+    mdlView.setViewName("AddServiceRequest");
+  
+    mdlView.addObject("command", serviceRequest);
+  
+    return mdlView;
+  }
+  
+  @RequestMapping(method = RequestMethod.POST)
+  public String onSubmit(@ModelAttribute("AddRequest") ServiceRequest serviceRequest, Model mdl)
+  {
+  
+    int rowAdded = serviceRequestDao.add(serviceRequest);
+    mdl.addAttribute("rowAdded",rowAdded);
+    return "Show";
+  }
+  
+  @RequestMapping(value = "showAll", method = RequestMethod.GET)
+  public String findAllCustomers(Model model)
+  {
+  
+    List<Customer> customerList = customerDao.findAll();
+    
+    model.addAttribute("customerList", customerList);
+    
+    return "ShowAllCustomer";
+  }
+  
+}

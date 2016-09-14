@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.training.controllers;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
+
+/**
+ * @author hgarg1
+ *
+ */
+@ControllerAdvice
+public class GlobalExceptionHandler {
+  
+  @Autowired
+  private ModelAndView mdl;
+  
+  @ExceptionHandler(DuplicateKeyException.class)
+  public ModelAndView globalHandler(HttpServletRequest req, Exception e){
+    
+    mdl.setViewName("error");
+    return mdl;
+  
+  }
+  
+}

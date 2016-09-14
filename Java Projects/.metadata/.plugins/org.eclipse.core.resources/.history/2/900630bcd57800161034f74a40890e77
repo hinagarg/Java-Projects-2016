@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.training.apps;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+  
+  public static void main(String[] args){
+  
+    Particpant part1 = new Participant(202, "Abhinav");
+    
+    Participant part2 = new Particpant(303, "Kimesh");
+    
+    Set<Particpant> list = new Hashset<Particpant>();
+    
+    list.add(part1);
+    list.add(part2);
+  }
+}

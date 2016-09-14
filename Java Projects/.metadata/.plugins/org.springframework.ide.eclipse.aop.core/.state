@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="PhilananthropyWithSpringHibernate"/>
+<aop-project name="SpringHandsOn"/>
+<aop-project name="SpringCore"/>
+<aop-project name="SpringCoreHandsOn"/>
+<aop-project name="SpringBootMVC"/>
+<aop-project name="SpringBootMVCWithJSP"/>
+<aop-project name="SpringBoot"/>
+<aop-project name="SpringMvc"/>
+<aop-project name="SpringWithHibernate"/>
+<aop-project name="SpringJdbc"/>
+<aop-project name="MyMavenProject"/>
+<aop-project name="RestBootMVC"/>
+<aop-project name="SpringIOWithAnnotation"/>
+<aop-project name="MVCWithAnnotation"/>
+</aop-reference-model>

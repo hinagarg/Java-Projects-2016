@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.training.daos;
+
+import java.io.Serializable;
+
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import com.training.ifaces.MyDAO;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ProjectDaoImpl implements MyDAO<T>{
+  
+  HibernateTemplate template;
+
+  @Override
+  public Object add(T t) {
+  // TODO Auto-generated method stub
+  return null;
+  }
+
+  @Override
+  public T find(Serializable s) {
+  // TODO Auto-generated method stub
+  return null;
+  }
+  
+
+}

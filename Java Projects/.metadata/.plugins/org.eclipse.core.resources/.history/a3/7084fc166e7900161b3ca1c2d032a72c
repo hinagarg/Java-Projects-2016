@@ -1,0 +1,8 @@
+package org.services.ifaces;
+
+public interface MyDao<T> {
+  
+  public object add(T object);
+  public T find();
+
+}

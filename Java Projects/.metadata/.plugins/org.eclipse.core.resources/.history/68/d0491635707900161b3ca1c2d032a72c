@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package org.services.daos;
+
+import java.io.Serializable;
+
+import org.hibernate.SessionFactory;
+import org.services.entity.ShoppingCart;
+import org.services.ifaces.MyDao;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ShoppingCartDaoImpl implements MyDao<ShoppingCart>{
+  
+  @Autowired
+  SessionFactory factory;
+
+  public Object add(ShoppingCart object) {
+  
+    Object key = factory.getCurrentSession().save(object);
+    return key;
+  }
+
+  public ShoppingCart find(Serializable key) {
+    return null;
+    
+  }
+
+
+  }
+
+  
+
+  
+}

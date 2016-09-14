@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event Handling with jQuery</title>
+<script type = "text/javascript" src = "Scripts/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+$("#btn1").click(function(){
+	
+	var row = $("<tr><td>Hina</td><td>Master</td></tr>")
+	$("table").append(row);
+})	
+$("table tr").on('mouseover', function(){$(this).addClass('style1')})
+.on('mouseout', function(){$(this).removeClass('style1')});
+$("#button1").on('click', function(){$("table tr").addClass('style2').removeClass('style1')});
+});
+
+
+</script>
+<style type="text/css">
+table{
+border:2px solid blue;
+border-collapse:collapse;
+margin-left:auto;
+margin-right:auto;
+}
+
+tr,td{
+border: 2px solid blue;
+}
+.style1
+{
+background-color: fuchsia;
+}
+
+.style2
+{
+background-color: red;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td>Name</td>
+<td>Skill</td>
+</tr>
+
+<tr>
+<td>Abhi</td>
+<td>Java</td>
+</tr>
+
+<tr>
+<td>Sur</td>
+<td>Singing</td>
+</tr>
+
+<tr>
+<td>Nar</td>
+<td>PHP</td>
+</tr>
+
+<tr>
+<td>Shor</td>
+<td>Master of All</td>
+</tr>
+</table>
+<input type = "button" id = "button1" value = "Click Me">
+<div style = "text-align: center;">
+<button id = "btn1">Add</button>
+</div>
+</body>
+</html>

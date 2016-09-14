@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Using NG Repeat and Filters</title>
+<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src = "Scripts/MyApplication.js"></script>
+
+<style>
+table{
+
+border: 2px solid blue;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+}
+
+tr,td,th{
+
+border: 2px solid true;
+}
+</style>
+
+</head>
+<body>
+
+<div data-ng-app = "iteration" data-ng-controller = "projectController">
+
+
+
+<h1 style = "text-align: center; color: red; ">Project Details</h1>
+
+<div style = "float:left;">
+<label>Search</label>
+<input type = "search" name = "srchCond" data-ng-model = "srchCond">
+</div>
+<table>
+
+<tr>
+<th>Project Code</th>
+<th>Description</th>
+<th>Cost</th>
+</tr>
+
+<tr data-ng-repeat = "project in projectDetails| filter:srchCond | orderBy : '-cost'">
+<td>{{project.projectCode}}</td>
+<td>{{project.description | uppercase}}</td>
+<td>{{project.cost | currency: 'USD. '}}</td>
+</tr>
+
+</table>
+<form>
+Project Code: <input type="text" data-ng-model="user.projcode" /><br />
+Project Description: <input type="text" data-ng-model="user.projdesc" /><br />
+Project Cost: <input type="text" data-ng-model="user.projcost" /><br />
+<button data-ng-click="projectPushArray(user)">ADD</button>
+</form>
+</div>
+</body>
+</html>

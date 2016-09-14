@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+<!-- Setter Dependency Injection -->
+<bean id = "patBean1" class = "com.training.domains.Patient" lazy-init="default"> 
+<property name = "patientId" value = "101"></property>
+<property name="patientName" value = "Ramesh"></property>
+<property name="patientType" value = "OutPatient"></property>
+</bean>
+
+<!-- Setter Dependency using Namespace -->
+<bean id = "docBean1" class = "com.training.domains.Doctor" p:doctorCode="10200" 
+p:doctorName = "Suresh" p:specialization = "ENT" p:patient-ref = "patBean1" />
+
+
+<!-- Constructor Dependency using NameSpace -->
+<bean id = "patBean2" class = "com.training.domains.Patient" c:patientId = "102" c:patientName = "Rajesh"  c:patientType="InPatient" />
+
+<!-- Constructor Dependency by Name -->
+<bean id = "patBean3" class = "com.training.domains.Patient">
+  <constructor-arg name = "patientId" value = "103"></constructor-arg>
+  <constructor-arg name = "patientName" value = "Kumar"></constructor-arg>
+  <constructor-arg name = "patientType" value = "OutPatient"></constructor-arg>
+
+</bean>
+
+<!-- Collection Dependency Injection -->
+<bean id = "docBean2" class = "com.training.domains.Doctor" p:doctorCode="10200" 
+p:doctorName = "Suresh" p:specialization = "ENT">
+<property name = "patientList">
+  <list value-type = "com.training.domains.Patient">
+    <ref bean = "patBean1"></ref>
+    <ref bean = "patBean2"></ref>
+    <ref bean = "patBean3"></ref>
+
+</list>
+
+</property>
+</bean>
+
+
+<bean id = "patient" class = "com.training.domains.Patient">
+  <property name="patientId" value = "201"></property>
+  <property name="patientName" value = "Mayank"></property>
+  <property name="patientType" value = "OutPatient"></property>
+</bean>
+
+<!--  AutoWiring By Name -->
+<bean id = "docBean3" class = "com.training.domains.Doctor" autowire = "byName">
+  <property name = "doctorCode" value = "2020"></property>
+  <property name="doctorName" value = "amit"></property>
+  <property name="specialization" value = "Eye"></property>
+  
+  
+  <!--  Collection Mapping Name -->
+<bean id = "docBean4" class = "com.training.domains.Doctor" autowire = "byName">
+  <property name = "doctorCode" value = "2020"></property>
+  <property name="doctorName" value = "amit"></property>
+  <property name="specialization" value = "Eye"></property>
+
+  <property name = "supportStaff">
+    <map key-type = "java.lang.String" value-type = "java.lang.String">
+    <entry key = "Pathologist" value = "Amar"> </entry>
+    </map>
+  </property> 
+</bean>
+</beans>

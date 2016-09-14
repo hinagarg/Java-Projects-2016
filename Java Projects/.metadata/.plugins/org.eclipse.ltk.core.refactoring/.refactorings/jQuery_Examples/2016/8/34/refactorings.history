@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;jQuery_Examples/WebContent/Sccripts&apos; to &apos;Scripts&apos;" description="Rename resource &apos;Sccripts&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/Sccripts" name="Scripts" stamp="1471415628432" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;jQuery_Examples/WebContent/CoreAjax.html&apos; to &apos;AjaxExample.html&apos;" description="Rename resource &apos;CoreAjax.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/CoreAjax.html" name="AjaxExample.html" stamp="1471428059059" updateReferences="true"/>
+</session>

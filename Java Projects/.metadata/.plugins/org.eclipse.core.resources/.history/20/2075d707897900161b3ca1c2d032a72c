@@ -1,0 +1,97 @@
+/**
+ * 
+ */
+package com.training.domain;
+
+import org.apache.log4j.Logger;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Address {
+  private String addressLine1;
+  private String addressLine2;
+  private String cityName;
+  private long pinCode;
+  private static final Logger log = Logger.getRootLogger();  
+  /**
+   * 
+   */
+  public Address() {
+  super();
+  // TODO Auto-generated constructor stub
+  }
+  /**
+   * @param addressLine1
+   * @param addressLine2
+   * @param cityName
+   * @param pinCode
+   */
+  public Address(String addressLine1, String addressLine2, String cityName, long pinCode) {
+  super();
+  log.debug("Address object is getting instantiated");
+  this.addressLine1 = addressLine1;
+  this.addressLine2 = addressLine2;
+  this.cityName = cityName;
+  this.pinCode = pinCode;
+  }
+  /**
+   * @return the addressLine1
+   */
+  public String getAddressLine1() {
+  return addressLine1;
+  }
+  /**
+   * @param addressLine1 the addressLine1 to set
+   */
+  public void setAddressLine1(String addressLine1) {
+  this.addressLine1 = addressLine1;
+  }
+  /**
+   * @return the addressLine2
+   */
+  public String getAddressLine2() {
+  return addressLine2;
+  }
+  /**
+   * @param addressLine2 the addressLine2 to set
+   */
+  public void setAddressLine2(String addressLine2) {
+  this.addressLine2 = addressLine2;
+  }
+  /**
+   * @return the cityName
+   */
+  public String getCityName() {
+  return cityName;
+  }
+  /**
+   * @param cityName the cityName to set
+   */
+  public void setCityName(String cityName) {
+  this.cityName = cityName;
+  }
+  /**
+   * @return the pinCode
+   */
+  public long getPinCode() {
+  return pinCode;
+  }
+  /**
+   * @param pinCode the pinCode to set
+   */
+  public void setPinCode(long pinCode) {
+  this.pinCode = pinCode;
+  }
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+  return "Address [addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", cityName=" + cityName
+      + ", pinCode=" + pinCode + "]";
+  }
+  
+  
+}

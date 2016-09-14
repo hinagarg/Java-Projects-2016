@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Read From Text File</title>
+<script type = "text/javascript">
+
+function readData(){
+var element = document.getElementById("usrName");
+
+var value = element.value;
+var msgElement = document.getElementById("msg1");
+if(value === 'Ramesh'){
+	msgElement.innerHTML = "<b style = color:green'>Valid User</b>";
+}
+
+else{
+	
+	msgElement.innerHTML = "<b style = color:red'>Valid User</b>";
+}
+console.log(value);
+}
+</script>
+<style type = "text/css">
+img{
+height: 100px;
+width: 100px;
+border: 2px solid true;
+}
+</style>
+
+</head>
+<body>
+  <img src = "images/Ambulance.png" alt = "img" name = "pict"
+  onmouseover = "document.pict.src = 'images/AnimalCare.jpeg'"
+  onmouseout = "document.pict.src = 'images/Ambulance.png'">
+<form>
+<label>User Name</label>
+<input type = "text" name ="username" id = "usrName" onblur = "readData()"> 
+<span id = "msg1"></span>
+<label>Pass Word</label>
+<input type = "password" name = "password" id ="password">
+ 
+<input type = "button" value = read>
+</form>
+</body>
+</html>

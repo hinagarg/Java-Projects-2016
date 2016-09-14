@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;DueCalculator.java&apos; to &apos;ServletExample/src/com.training.domains&apos;&#x0D;&#x0A;- Original project: &apos;ServletExample&apos;&#x0D;&#x0A;- Destination element: &apos;ServletExample/src/com.training.domains&apos;&#x0D;&#x0A;- Original element: &apos;com.training.servlet.DueCalculator.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.training.domains" element1="/src&lt;com.training.servlet{DueCalculator.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1471943138678" units="1" version="1.0"/>
+</session>

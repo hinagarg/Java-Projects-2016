@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=QuickStart/src&lt;com.training{BankAccount.java[BankAccount" modifiers="1" timestamp="1469599207000"/>
+<typeInfo handle="=Inheritance_Example/src&lt;com.training{Loan.java[Loan" modifiers="1025" timestamp="1469811531130"/>
+<typeInfo handle="=Inheritance_Example/src&lt;com.training.apps{LoanApplication.java[LoanApplication" modifiers="1" timestamp="1469619309327"/>
+<typeInfo handle="=Polymorphism/src&lt;com.training.ifaces{IAutomobile.java[IAutomobile" modifiers="513" timestamp="1469615744955"/>
+<typeInfo handle="=Polymorphism/src&lt;com.training.domains{ShowRoom.java[ShowRoom" modifiers="1" timestamp="1469615878506"/>
+<typeInfo handle="=ObjectClass/C:\/Program Files\/Java\/jdk1.7.0_51\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1469514590716"/>
+<typeInfo handle="=CollectionExamples/src&lt;com.training.ifaces{IDonor.java[IDonor" modifiers="513" timestamp="1470031570019"/>
+<typeInfo handle="=CollectionExamples/C:\/Program Files\/Java\/jdk1.7.0_51\/jre\/lib\/rt.jar&lt;org.omg.CORBA(IDLType.class[IDLType" modifiers="1537" timestamp="1469514590716"/>
+<typeInfo handle="=CollectionExamples/C:\/Program Files\/Java\/jdk1.7.0_51\/jre\/lib\/rt.jar&lt;java.util(Comparator.class[Comparator" modifiers="1537" timestamp="1469514590716"/>
+<typeInfo handle="=HandsOnProblemsTraining2/src&lt;com.training.domains{Iproject.java[Iproject" modifiers="513" timestamp="1470136714753"/>
+<typeInfo handle="=Threads/C:\/Program Files\/Java\/jdk1.7.0_51\/jre\/lib\/rt.jar&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1469514590716"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.domains{LoanAccount.java[LoanAccount" modifiers="1025" timestamp="1471156111162"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.adapter{BankAccount.java[BankAccount" modifiers="1" timestamp="1471244200194"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.decorator{BankAccount.java[BankAccount" modifiers="1025" timestamp="1471257378476"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.decorator{FeatureDecorator.java[FeatureDecorator" modifiers="1025" timestamp="1471258237529"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.facade{Store.java[Store" modifiers="513" timestamp="1471263630987"/>
+<typeInfo handle="=DesignPatternsSelf/src&lt;com.training.proxy{Subject.java[Subject" modifiers="513" timestamp="1471266552780"/>
+<typeInfo handle="=CustomTags/C:\/apache-tomcat-7.0.70\/apache-tomcat-7.0.70\/lib\/jsp-api.jar&lt;javax.servlet.jsp.tagext(TagSupport.class[TagSupport" modifiers="33" timestamp="1466034038000"/>
+<typeInfo handle="=SpringJdbc/src&lt;com.training.ifaces{MyDao.java[MyDao" modifiers="513" timestamp="1473072274662"/>
+<typeInfo handle="=HibernateCRUD/src\/main\/java&lt;com.training.ifaces{MyDao.java[MyDao" modifiers="513" timestamp="1473670734237"/>
+<typeInfo handle="=HibernateCRUD/src\/main\/java&lt;com.training.entity{Car.java[Car" modifiers="1" timestamp="1473672554918"/>
+<typeInfo handle="=AssociatingMapping/src\/main\/java&lt;com.training.entity{Participant.java[Participant" modifiers="1" timestamp="1473676442912"/>
+<typeInfo handle="=AssociatingMapping/src\/main\/java&lt;com.training.entity{Training.java[Training" modifiers="1" timestamp="1473676406353"/>
+<typeInfo handle="=SpringWithHibernate/src\/main\/java&lt;org.services.entity{ShoppingCart.java[ShoppingCart" modifiers="1" timestamp="1473743339706"/>
+<typeInfo handle="=PhilananthropyWithSpringHibernate/src\/main\/java&lt;com.training.domain{Project.java[Project" modifiers="1" timestamp="1473747415483"/>
+</typeInfoHistroy>

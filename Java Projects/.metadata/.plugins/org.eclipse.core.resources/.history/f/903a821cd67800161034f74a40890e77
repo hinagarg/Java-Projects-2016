@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.training.apps;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.training.entity.Participant;
+import com.training.entity.Training;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+  
+  public static void main(String[] args){
+  
+    Participant part1 = new Participant(202, "Abhinav");
+    
+    Participant part2 = new Participant(303, "Kimesh");
+    
+    Set<Participant> list = new HashSet<Participant>();
+    
+    list.add(part1);
+    list.add(part2);
+    
+    Training training1 = new Training(111, "Agam", list);
+    
+    SessionFactory factory = HiberUtils.getSessionFactory();
+    
+    Session session = factory.openSession();
+  }
+}

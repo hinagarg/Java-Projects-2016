@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<datalist id = "unames">
+<option>admin</option>
+<option>jerry</option>
+<option>blake</option>
+<option>rita</option>
+</datalist>
+<form action = "ValidateLoginServlet" method = "post">
+<label>Username</label>
+<input type = "text" name = "userName" list = "unames">
+<label>Password</label>
+<input type = "text" name = "passWord">
+<input type = "submit" value = "Submit">
+</form>
+</body>
+</html>

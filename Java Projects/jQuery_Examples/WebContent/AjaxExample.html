@@ -1,0 +1,108 @@
+<!Doctype>
+<html>
+<head>
+<meta charset = "ISO-8859-1">
+<title>Using Ajax</title>
+<link href = "images/ajax.png" rel = "icon">
+<script type="text/javascript" src = "Scripts/jquery.js"></script>
+
+<script type = "text/javascript">
+
+$(function(){
+
+$("#code").blur(function(){	
+	
+var selectedCode = $("#code").val();
+
+var link= 'http://jsonplaceholder.typicode.com/users/'+selectedCode;
+
+var options = {  
+		
+		type: 'GET',
+		url:link,
+    dataType: 'json',
+    error: function (xhr, textStatus, errorThrown) {
+        console.log('error');
+    },
+    success: function (resp, textStatus) {
+    	
+    	        userName = resp.name;
+               $('#name').val(userName);
+    }
+}
+$.ajax(options);
+
+});
+
+});
+
+/*req = new XMLHttpRequest();
+function getData(){	
+	
+	userCode = document.getElementById("code").value;
+	
+	console.log("user code:" + userCode);
+	
+	targetField = document.getElementById("name");
+	
+	var queryString = "http://jsonplaceholder.typicode.com/users/"+escape(userCode);
+	
+	req.open('GET', queryString, true);
+	
+	req.onreadystatechange = processRequest;
+	
+	req.send(null);
+	/*
+	req.onreadystatechange = function() {
+		  if (req.status == 200 && req.readyState == 4) {
+			   
+			    var data =req.responseText;
+			      var jsonobj = JSON.parse(data);
+			        userName=jsonobj.name;
+			      
+			        targetField.value = userName;
+
+			      
+			  }
+			}*/
+//}
+
+/*function processRequest() {
+	if (req.status == 200 && req.readyState == 4) {
+	 
+		var data =req.responseText;
+	    var jsonobj = JSON.parse(data);
+	      userName=jsonobj.name;
+	    
+	      targetField.value = userName;
+
+	    
+	}
+}*/
+	
+</script>
+</head>
+<body>
+<section>
+<form action = "">
+<fieldset>
+<legend>Core Ajax Example</legend>
+<div>
+<label>User Code</label>
+<input type = "text" name = "code" id = "code">
+</div>
+
+<div>
+<label>User Name</label>
+<input type = "text" name = "name" id = "name">
+</div>
+
+<div>
+<input type = "submit" value = "Submit">
+</div>
+
+</fieldset>
+</form>
+</section>
+</body>
+</html>

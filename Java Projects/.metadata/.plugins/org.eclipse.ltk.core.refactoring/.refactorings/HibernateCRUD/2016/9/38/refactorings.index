@@ -1,0 +1,7 @@
+1473664538768	Move 'Car.hbm.xml' to 'resources'
+1473664543408	Move 'hibernate.cfg.xml' to 'resources'
+1473671343283	Rename package 'com.training.domain'
+1473672550407	Encapsulate field 'offcieAddress'
+1473672554925	Encapsulate field 'resiAddress'
+1473676477596	Copy file
+1473677260501	Copy compilation unit

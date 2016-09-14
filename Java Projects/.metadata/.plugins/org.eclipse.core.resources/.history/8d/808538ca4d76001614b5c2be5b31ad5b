@@ -1,0 +1,97 @@
+/**
+ * 
+ */
+package com.training.domains;
+
+import org.springframework.stereotype.Component;
+
+/**
+ * @author hgarg1
+ *
+ */
+@Component
+public class TestReport {
+  
+  private long reportId;
+  private String patientName;
+  private String testType;
+  private String testReport;
+  /**
+   * 
+   */
+  public TestReport() {
+  super();
+  // TODO Auto-generated constructor stub
+  }
+  /**
+   * @param reportId
+   * @param patientName
+   * @param testType
+   * @param testReport
+   */
+  public TestReport(long reportId, String patientName, String testType, String testReport) {
+  super();
+  this.reportId = reportId;
+  this.patientName = patientName;
+  this.testType = testType;
+  this.testReport = testReport;
+  }
+  /**
+   * @return the reportId
+   */
+  public long getReportId() {
+  return reportId;
+  }
+  /**
+   * @param reportId the reportId to set
+   */
+  public void setReportId(long reportId) {
+  this.reportId = reportId;
+  }
+  /**
+   * @return the patientName
+   */
+  public String getPatientName() {
+  return patientName;
+  }
+  /**
+   * @param patientName the patientName to set
+   */
+  public void setPatientName(String patientName) {
+  this.patientName = patientName;
+  }
+  /**
+   * @return the testType
+   */
+  public String getTestType() {
+  return testType;
+  }
+  /**
+   * @param testType the testType to set
+   */
+  public void setTestType(String testType) {
+  this.testType = testType;
+  }
+  /**
+   * @return the testReport
+   */
+  public String getTestReport() {
+  return testReport;
+  }
+  /**
+   * @param testReport the testReport to set
+   */
+  public void setTestReport(String testReport) {
+  this.testReport = testReport;
+  }
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+  return "TestReport [reportId=" + reportId + ", patientName=" + patientName + ", testType=" + testType
+      + ", testReport=" + testReport + "]";
+  }
+  
+  
+}

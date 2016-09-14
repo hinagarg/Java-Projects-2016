@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package com.training;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
+
+/**
+ * @author hgarg1
+ *
+ */
+
+@Controller
+public class MyController {
+  
+  @RequestMapping("/")
+  public String welcome(){
+  
+    return "index";
+  }
+  
+  @Autowired
+  private ModelAndView modelView;
+  
+  @Autowired
+  private RestTemplate template;
+  
+  @RequestMapping(value="/getReports", method = RequestMethod.GET)
+  public ModelAndView viewReports(){
+  
+    String reports = template.getForObject("http://localhost:5050/findAll",String.class);
+    
+    modelView.addObject("reports", reports);
+    
+    modelView.setViewName("ShowReports");
+    
+    return modelView;
+  }
+}

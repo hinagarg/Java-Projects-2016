@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package com.training.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+
+import coom.training.entity.ServiceRequest;
+
+/**
+ * @author hgarg1
+ *
+ */
+@Component("dao")
+public class ServiceRequestDao {
+  
+  @Autowired
+  BeanPropertyRowMapper<ServiceRequest> mapper;
+  
+  @Autowired
+  private JdbcTemplate template;
+  
+  public int add(ServiceRequest object) {
+  // TODO Auto-generated method stub
+  
+  String sql = "insert into Servicerequest values(?,?,?,?)";
+  
+  int rowInserted = template.update(sql, object.getCustomerId(), object.getDescription(), object.getRequestId(), object.getRequestType());
+  return rowInserted;
+  }
+  
+  
+  public List<ServiceRequest> findAll() {
+        
+    
+    String sql = "select * from Servicerequest";
+    
+    List<ServiceRequest> custList = template.query(sql, mapper);
+    
+    return custList;
+    }
+}

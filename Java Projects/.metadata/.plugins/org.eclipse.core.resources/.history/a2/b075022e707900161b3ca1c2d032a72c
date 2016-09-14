@@ -1,0 +1,65 @@
+/**
+ * 
+ */
+package org.services.entity;
+
+/**
+ * @author hgarg1
+ *
+ */
+public class ShoppingCart {
+  
+  
+  private int cardId;
+  private String item;
+  /**
+   * 
+   */
+  public ShoppingCart() {
+  super();
+  // TODO Auto-generated constructor stub
+  }
+  /**
+   * @param cardId
+   * @param item
+   */
+  public ShoppingCart(int cardId, String item) {
+  super();
+  this.cardId = cardId;
+  this.item = item;
+  }
+  /**
+   * @return the cardId
+   */
+  public int getCardId() {
+  return cardId;
+  }
+  /**
+   * @param cardId the cardId to set
+   */
+  public void setCardId(int cardId) {
+  this.cardId = cardId;
+  }
+  /**
+   * @return the item
+   */
+  public String getItem() {
+  return item;
+  }
+  /**
+   * @param item the item to set
+   */
+  public void setItem(String item) {
+  this.item = item;
+  }
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+  return "ShoppingCart [cardId=" + cardId + ", item=" + item + "]";
+  }
+  
+  
+
+}

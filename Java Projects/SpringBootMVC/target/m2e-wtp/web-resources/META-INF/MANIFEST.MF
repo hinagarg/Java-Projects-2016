@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBootMVC
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hgarg1
+Implementation-Vendor-Id: com.training
+Build-Jdk: 1.8.0_65
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootMV
+ C/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

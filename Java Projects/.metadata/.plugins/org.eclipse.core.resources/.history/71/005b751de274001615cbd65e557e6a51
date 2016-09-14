@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SpringHandsOn">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="spring-core-4.0.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/hgarg1/Downloads/SpringIO (1)/SpringIO/spring-core-4.0.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-4.0.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/hgarg1/Downloads/Spring jars/spring-tx-4.0.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.0.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/hgarg1/Downloads/SpringIO (1)/SpringIO/spring-expression-4.0.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="SpringHandsOn"/>
+        <property name="java-output-path" value="/SpringHandsOn/build/classes"/>
+    </wb-module>
+</project-modules>

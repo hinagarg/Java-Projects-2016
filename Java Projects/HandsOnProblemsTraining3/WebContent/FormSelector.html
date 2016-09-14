@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Selector</title>
+<link href = "css/FormSelector.css" rel = "stylesheet" type = "text/css">
+<script type = "text/javascript" src = "scripts/FormSelector.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+<script type = "text/javascript">
+$(function(){
+$("#radio-but").on('click', function(e) {
+    if(($('#radio_1:checked').val())){
+    	
+    	($('#sel_value').val("Yes"));
+    } 
+    
+    else if(($('#radio_2:checked').val())){
+        
+        ($('#sel_value').val("No"));
+      } 
+ });
+});
+
+$(function(){
+	$("#radio-unchecked").on('click', function(e) {
+	    if(($('#radio_1:checked').val())){
+	      
+	      ($('#sel_value').val("No"));
+	    } 
+	    
+	    else if(($('#radio_2:checked').val())){
+	        
+	        ($('#sel_value').val("Yes"));
+	      } 
+	 });
+	});
+</script>
+
+</head>
+
+<body>
+<!--  header -->
+<header id = "header">
+<h1>Form Selector Example</h1>
+</header>
+
+<!-- navigation -->
+<nav id = "nav">
+<label>Selected Value</label>
+<input type="text" name = "selected_value" id = "sel_value"> 
+<table id = "nav-menu">
+<tr>
+<td>
+<button onclick = "display_text_value();">Read Text</button>
+</td>
+</tr>
+<tr>
+<td>
+<button onclick = "display_select_value();">Read Select</button>
+</td>
+</tr>
+<tr>
+<td>
+<button id = "radio-but">Read Radio</button>
+</td>
+</tr>
+<tr>
+<td>
+<button onclick = "display_checkbox_value();">Read Check Box</button>
+</td>
+</tr>
+<tr>
+<td>
+<button id = "radio-unchecked">Read Unchecked Radio</button>
+</td>
+</tr>
+</table>
+</nav>
+
+<!-- page_content -->
+<div id = "page-content">
+<section id = "section">
+<ul>
+<li><img src = "images/hibernate.png"></img></li>
+<li><img src = "images/jquery.jpg"></img></li>
+<li><img src = "images/spring.png"></img></li>
+</ul>
+</section>
+<article id = "article">
+<section>
+<form>
+ <fieldset id = "new-user">
+    <legend>New User</legend>
+    UserName: <input type="text" id = "uname" name = "username"><br>
+    PassWord: <input type="password" id = "pwd" name = "password"><br>
+    Skills: 
+    <label>Java</label>
+    <input type="checkbox" id = "java" name = "java"> 
+    <label>DotNET</label>
+    <input type="checkbox" id = "dot_net" name = "dot_net"><br>
+    
+    City: <select id = "city">
+    <option value="CA" >California</option>
+    <option value="CH" >Chicago</option>
+    </select><br>
+    Agree To Terms: 
+    <label>Yes</label>
+    <input type = "radio"  id = "radio_1" name = "radioName" value = "Yes">
+    <label>No</label>
+    <input type = "radio"  id = "radio_2" name = "radioName" value = "No">
+  </fieldset>
+</form>
+</section>
+</article>
+</div>
+
+<!-- footer -->
+<footer id = "footer">
+<h4>Show Case Examples</h4>
+</footer>
+
+</body>
+</html>

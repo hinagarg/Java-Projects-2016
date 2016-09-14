@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package com.training.apps;
+
+
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.daos.ProjectDaoImpl;
+import com.training.domain.Project;
+import com.training.ifaces.MyDAO;
+
+
+/**
+ * @author hgarg1
+ *
+ */
+public class Application {
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    
+    try(ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("bean2.xml");) {
+        
+      /*Project projectBean = (Project) ctx.getBean("projBean1", Project.class);
+      
+      System.out.println("Project List returned by IOC Container" + projectBean);*/
+      
+      //ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
+      
+      MyDAO<Project> dao = (ProjectDaoImpl)context.getBean(ProjectDaoImpl.class);
+    
+      Project project = (Project) context.getBean("projBean1");
+    
+      Long key = (Long)dao.add(project);
+    
+      System.out.println("One Project Added");
+    
+     }
+    catch(Exception e){
+    
+      e.printStackTrace();
+    }
+   }
+
+ }
+
+

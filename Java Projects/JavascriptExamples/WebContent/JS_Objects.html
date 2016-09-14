@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+img{
+width: 100px;
+height:100px;
+border: 2px solid fuchsia;
+}
+
+p{
+font-family: Arial;
+font-size : 1.3em;
+font-style: italic;
+color: green; 
+}
+</style>
+<script type="text/javascript">
+
+// Create Three Arrays MOdel, Description, Color
+// Iterate through the array and print the details using writeline methods
+
+var models = ["LCD TV", "AC"];
+var description = ["images/tv.jpg", "images/ac.jpg"];
+var colors = ["black", "red"];
+
+function display(){
+	
+	for(i = 0; i < 2; i++)
+		{
+		
+		var element = document.getElementsByTagName("img")[i];	
+		element.setAttribute('src', description[i]);
+		
+		var element2 = document.getElementsByTagName("h2")[i];
+		element2.innerHTML = models[i];
+		
+		var element3 = document.getElementsByTagName("p")[i];
+		element3.innerHTML = colors[i];
+		}
+}
+</script>
+</head>
+<body>
+<div>
+<h2></h2>
+<img src = "" alt = "product">
+<p></p>
+</div>
+<div>
+<h2></h2>
+<img src = "" alt = "product">
+<p></p>
+</div>
+<script type="text/javascript">
+display();
+</script>
+</body>
+</html>

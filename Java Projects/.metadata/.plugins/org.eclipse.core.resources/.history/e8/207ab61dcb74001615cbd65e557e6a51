@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+
+<script>
+
+function details() {
+alert("Hello");
+
+}
+</script>

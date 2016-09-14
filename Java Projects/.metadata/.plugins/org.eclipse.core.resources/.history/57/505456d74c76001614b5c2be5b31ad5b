@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.training.domains;
+
+import org.springframework.stereotype.Component;
+
+/**
+ * @author hgarg1
+ *
+ */
+@Component
+public class TestReport {
+
+}

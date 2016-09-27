@@ -34,13 +34,13 @@ public class Application {
     
       Project project = (Project) context.getBean("projBean1");
     
-      /*Long key = (Long)dao.add(project);
+      Long key = (Long)dao.add(project);
     
-      System.out.println("One Project Added");*/
+      System.out.println("One Project Added");
       
-      Object proj = (Object)dao.find(1001L);
+      /*Object proj = (Object)dao.find(1001L);
       
-      System.out.println(proj);
+      System.out.println(proj);*/
     
      }
     catch(Exception e){

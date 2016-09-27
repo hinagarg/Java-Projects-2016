@@ -57,7 +57,7 @@ p:doctorName = "Suresh" p:specialization = "ENT">
   
   
   <!--  Collection Mapping Name -->
-<bean id = "docBean4" class = "com.training.domains.Doctor" autowire = "byName">
+<!--<bean id = "docBean4" class = "com.training.domains.Doctor" autowire = "byName">
   <property name = "doctorCode" value = "2020"></property>
   <property name="doctorName" value = "amit"></property>
   <property name="specialization" value = "Eye"></property>
@@ -66,6 +66,6 @@ p:doctorName = "Suresh" p:specialization = "ENT">
     <map key-type = "java.lang.String" value-type = "java.lang.String">
     <entry key = "Pathologist" value = "Amar"> </entry>
     </map>
-  </property> 
+  </property>  --> 
 </bean>
 </beans>

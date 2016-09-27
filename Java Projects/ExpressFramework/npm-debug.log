@@ -1,0 +1,259 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose readDependencies loading dependencies from C:\JavaTraining2016\ExpressFramework\package.json
+5 verbose install where, deps [ 'C:\\JavaTraining2016\\ExpressFramework',
+5 verbose install   [ 'express', 'ejs' ] ]
+6 verbose install where, peers [ 'C:\\JavaTraining2016\\ExpressFramework', [] ]
+7 verbose installManyTop reading for lifecycle C:\JavaTraining2016\ExpressFramework\package.json
+8 info preinstall ExpressFramework@0.0.1
+9 verbose readDependencies loading dependencies from C:\JavaTraining2016\ExpressFramework\package.json
+10 silly cache add args [ 'express@3.2.6', null ]
+11 verbose cache add spec express@3.2.6
+12 silly cache add args [ 'ejs@*', null ]
+13 verbose cache add spec ejs@*
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'express@3.2.6',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'express',
+14 silly cache add   rawSpec: '3.2.6',
+14 silly cache add   spec: '3.2.6',
+14 silly cache add   type: 'version' }
+15 silly addNamed express@3.2.6
+16 verbose addNamed "3.2.6" is a plain semver version for express
+17 silly mapToRegistry name express
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry data Result {
+20 silly mapToRegistry   raw: 'express',
+20 silly mapToRegistry   scope: null,
+20 silly mapToRegistry   name: 'express',
+20 silly mapToRegistry   rawSpec: '',
+20 silly mapToRegistry   spec: 'latest',
+20 silly mapToRegistry   type: 'tag' }
+21 silly mapToRegistry uri https://registry.npmjs.org/express
+22 verbose addNameVersion registry:https://registry.npmjs.org/express not in flight; fetching
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: 'ejs@*',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'ejs',
+23 silly cache add   rawSpec: '*',
+23 silly cache add   spec: '*',
+23 silly cache add   type: 'range' }
+24 silly addNamed ejs@*
+25 verbose addNamed "*" is a valid semver range for ejs
+26 silly addNameRange { name: 'ejs', range: '*', hasData: false }
+27 silly mapToRegistry name ejs
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'ejs',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   name: 'ejs',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/ejs
+32 verbose addNameRange registry:https://registry.npmjs.org/ejs not in flight; fetching
+33 verbose request uri https://registry.npmjs.org/express
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 12:14:32 PM
+36 verbose request id 99e050992c04fd8c
+37 http request GET https://registry.npmjs.org/express
+38 verbose request uri https://registry.npmjs.org/ejs
+39 verbose request no auth needed
+40 info attempt registry request try #1 at 12:14:32 PM
+41 http request GET https://registry.npmjs.org/ejs
+42 http 200 https://registry.npmjs.org/ejs
+43 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 verbose headers   etag: '"F3NE1LW1YE4PJFRJH80H481IE"',
+43 verbose headers   'content-type': 'application/json',
+43 verbose headers   'content-encoding': 'gzip',
+43 verbose headers   'cache-control': 'max-age=300',
+43 verbose headers   'content-length': '11185',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Tue, 20 Sep 2016 06:44:33 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   age: '1',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-sin6924-SIN',
+43 verbose headers   'x-cache': 'HIT',
+43 verbose headers   'x-cache-hits': '52',
+43 verbose headers   'x-timer': 'S1474353873.125449,VS0,VE0',
+43 verbose headers   vary: 'Accept-Encoding' }
+44 silly get cb [ 200,
+44 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+44 silly get     etag: '"F3NE1LW1YE4PJFRJH80H481IE"',
+44 silly get     'content-type': 'application/json',
+44 silly get     'content-encoding': 'gzip',
+44 silly get     'cache-control': 'max-age=300',
+44 silly get     'content-length': '11185',
+44 silly get     'accept-ranges': 'bytes',
+44 silly get     date: 'Tue, 20 Sep 2016 06:44:33 GMT',
+44 silly get     via: '1.1 varnish',
+44 silly get     age: '1',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-served-by': 'cache-sin6924-SIN',
+44 silly get     'x-cache': 'HIT',
+44 silly get     'x-cache-hits': '52',
+44 silly get     'x-timer': 'S1474353873.125449,VS0,VE0',
+44 silly get     vary: 'Accept-Encoding' } ]
+45 verbose get saving ejs to C:\Users\hgarg1\AppData\Roaming\npm-cache\registry.npmjs.org\ejs\.cache.json
+46 verbose correctMkdir C:\Users\hgarg1\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+47 verbose makeDirectory C:\Users\hgarg1\AppData\Roaming\npm-cache creation not in flight; initializing
+48 verbose makeCacheDir UID & GID are irrelevant on win32
+49 silly addNameRange number 2 { name: 'ejs', range: '*', hasData: true }
+50 silly addNameRange versions [ 'ejs',
+50 silly addNameRange   [ '0.0.1',
+50 silly addNameRange     '0.0.2',
+50 silly addNameRange     '0.0.3',
+50 silly addNameRange     '0.0.4',
+50 silly addNameRange     '0.1.0',
+50 silly addNameRange     '0.2.0',
+50 silly addNameRange     '0.2.1',
+50 silly addNameRange     '0.3.0',
+50 silly addNameRange     '0.3.1',
+50 silly addNameRange     '0.4.0',
+50 silly addNameRange     '0.4.1',
+50 silly addNameRange     '0.4.2',
+50 silly addNameRange     '0.4.3',
+50 silly addNameRange     '0.5.0',
+50 silly addNameRange     '0.6.0',
+50 silly addNameRange     '0.6.1',
+50 silly addNameRange     '0.7.0',
+50 silly addNameRange     '0.7.1',
+50 silly addNameRange     '0.7.2',
+50 silly addNameRange     '0.8.0',
+50 silly addNameRange     '0.8.1',
+50 silly addNameRange     '0.8.2',
+50 silly addNameRange     '0.8.3',
+50 silly addNameRange     '0.8.4',
+50 silly addNameRange     '0.8.5',
+50 silly addNameRange     '0.8.6',
+50 silly addNameRange     '0.8.8',
+50 silly addNameRange     '1.0.0',
+50 silly addNameRange     '2.0.2',
+50 silly addNameRange     '2.0.3',
+50 silly addNameRange     '2.0.4',
+50 silly addNameRange     '2.0.5',
+50 silly addNameRange     '2.0.6',
+50 silly addNameRange     '2.0.7',
+50 silly addNameRange     '2.0.8',
+50 silly addNameRange     '2.1.1',
+50 silly addNameRange     '2.1.2',
+50 silly addNameRange     '2.1.3',
+50 silly addNameRange     '2.1.4',
+50 silly addNameRange     '2.2.1',
+50 silly addNameRange     '2.2.2',
+50 silly addNameRange     '2.2.3',
+50 silly addNameRange     '2.2.4',
+50 silly addNameRange     '2.3.1',
+50 silly addNameRange     '2.3.2',
+50 silly addNameRange     '2.3.3',
+50 silly addNameRange     '2.3.4',
+50 silly addNameRange     '2.4.1',
+50 silly addNameRange     '2.4.2',
+50 silly addNameRange     '2.5.1',
+50 silly addNameRange     '2.5.2' ] ]
+51 silly addNamed ejs@2.5.2
+52 verbose addNamed "2.5.2" is a plain semver version for ejs
+53 silly mapToRegistry name ejs
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'ejs',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   name: 'ejs',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/ejs
+58 verbose addRemoteTarball https://registry.npmjs.org/ejs/-/ejs-2.5.2.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/ejs/-/ejs-2.5.2.tgz',
+59 verbose addRemoteTarball   '21444ba09386f0c65b6eafb96a3d51bcb3be80d1' ]
+60 info retry fetch attempt 1 at 12:14:33 PM
+61 info attempt registry request try #1 at 12:14:33 PM
+62 http fetch GET https://registry.npmjs.org/ejs/-/ejs-2.5.2.tgz
+63 http fetch 200 https://registry.npmjs.org/ejs/-/ejs-2.5.2.tgz
+64 http 200 https://registry.npmjs.org/express
+65 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+65 verbose headers   etag: '"4T03HKF2010XU2T93BTICEXQ2"',
+65 verbose headers   'content-type': 'application/json',
+65 verbose headers   'content-encoding': 'gzip',
+65 verbose headers   'cache-control': 'max-age=300',
+65 verbose headers   'content-length': '56268',
+65 verbose headers   'accept-ranges': 'bytes',
+65 verbose headers   date: 'Tue, 20 Sep 2016 06:44:33 GMT',
+65 verbose headers   via: '1.1 varnish',
+65 verbose headers   age: '18',
+65 verbose headers   connection: 'keep-alive',
+65 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+65 verbose headers   'x-cache': 'HIT',
+65 verbose headers   'x-cache-hits': '2',
+65 verbose headers   'x-timer': 'S1474353873.131634,VS0,VE0',
+65 verbose headers   vary: 'Accept-Encoding' }
+66 silly get cb [ 200,
+66 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+66 silly get     etag: '"4T03HKF2010XU2T93BTICEXQ2"',
+66 silly get     'content-type': 'application/json',
+66 silly get     'content-encoding': 'gzip',
+66 silly get     'cache-control': 'max-age=300',
+66 silly get     'content-length': '56268',
+66 silly get     'accept-ranges': 'bytes',
+66 silly get     date: 'Tue, 20 Sep 2016 06:44:33 GMT',
+66 silly get     via: '1.1 varnish',
+66 silly get     age: '18',
+66 silly get     connection: 'keep-alive',
+66 silly get     'x-served-by': 'cache-sin6923-SIN',
+66 silly get     'x-cache': 'HIT',
+66 silly get     'x-cache-hits': '2',
+66 silly get     'x-timer': 'S1474353873.131634,VS0,VE0',
+66 silly get     vary: 'Accept-Encoding' } ]
+67 verbose get saving express to C:\Users\hgarg1\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+68 verbose correctMkdir C:\Users\hgarg1\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+69 silly mapToRegistry name express
+70 silly mapToRegistry using default registry
+71 silly mapToRegistry registry https://registry.npmjs.org/
+72 silly mapToRegistry data Result {
+72 silly mapToRegistry   raw: 'express',
+72 silly mapToRegistry   scope: null,
+72 silly mapToRegistry   name: 'express',
+72 silly mapToRegistry   rawSpec: '',
+72 silly mapToRegistry   spec: 'latest',
+72 silly mapToRegistry   type: 'tag' }
+73 silly mapToRegistry uri https://registry.npmjs.org/express
+74 verbose addRemoteTarball https://registry.npmjs.org/express/-/express-3.2.6.tgz not in flight; adding
+75 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-3.2.6.tgz',
+75 verbose addRemoteTarball   'd8a9fe065adc23c5b41ec2c689c672b261430ffc' ]
+76 info retry fetch attempt 1 at 12:14:33 PM
+77 info attempt registry request try #1 at 12:14:33 PM
+78 http fetch GET https://registry.npmjs.org/express/-/express-3.2.6.tgz
+79 silly fetchAndShaCheck shasum 21444ba09386f0c65b6eafb96a3d51bcb3be80d1
+80 verbose addTmpTarball C:\Users\hgarg1\AppData\Local\Temp\npm-9428-fdc4062b\registry.npmjs.org\ejs\-\ejs-2.5.2.tgz not in flight; adding
+81 verbose addTmpTarball already have metadata; skipping unpack for ejs@2.5.2
+82 verbose correctMkdir C:\Users\hgarg1\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+83 silly cache afterAdd ejs@2.5.2
+84 verbose afterAdd C:\Users\hgarg1\AppData\Roaming\npm-cache\ejs\2.5.2\package\package.json not in flight; writing
+85 verbose correctMkdir C:\Users\hgarg1\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+86 verbose afterAdd C:\Users\hgarg1\AppData\Roaming\npm-cache\ejs\2.5.2\package\package.json written
+87 http fetch 200 https://registry.npmjs.org/express/-/express-3.2.6.tgz
+88 warn retry will retry, error on last attempt: Error: EBUSY: resource busy or locked, rename 'C:\Users\hgarg1\AppData\Local\Temp\npm-9428-fdc4062b\registry.npmjs.org\express\-\express-3.2.6.tgz.2662629221' -> 'C:\Users\hgarg1\AppData\Local\Temp\npm-9428-fdc4062b\registry.npmjs.org\express\-\express-3.2.6.tgz'
+89 verbose stack TypeError: tarball.destroy is not a function
+89 verbose stack     at WriteStreamAtomic.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-remote-tarball.js:85:15)
+89 verbose stack     at emitOne (events.js:82:20)
+89 verbose stack     at WriteStreamAtomic.emit (events.js:169:7)
+89 verbose stack     at WriteStreamAtomic.emit (C:\Program Files\nodejs\node_modules\npm\node_modules\fs-write-stream-atomic\index.js:60:34)
+89 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\fs-write-stream-atomic\index.js:89:19
+89 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+90 verbose cwd C:\JavaTraining2016\ExpressFramework
+91 error Windows_NT 6.1.7601
+92 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+93 error node v4.5.0
+94 error npm  v2.15.9
+95 error tarball.destroy is not a function
+96 error If you need help, you may report this error at:
+96 error     <https://github.com/npm/npm/issues>
+97 verbose exit [ 1, true ]

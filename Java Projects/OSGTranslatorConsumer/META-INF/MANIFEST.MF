@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGTranslatorConsumer
+Bundle-SymbolicName: OSGTranslatorConsumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgtranslatorconsumer.Activator
+Bundle-Vendor: Jhon Consumer
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.training.ifaces,
+ org.osgi.framework;version="1.3.0"
+Require-Bundle: OSGITranslatorService;bundle-version="1.0.0",
+ org.eclipse.osgi.util;bundle-version="3.3.100"

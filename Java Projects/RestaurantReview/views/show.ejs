@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/hotel.css' />
+  </head>
+  <body>
+    <nav>
+    <a href = "/">Home</a>
+    </nav>
+    <h1>Hotel Review</h1>
+    <table>
+      <tr>
+      <th>Hotel Name</th>
+      <th>Hotel Rating</th>
+      <th>Hotel Reviewers</th>
+      </tr>
+    <% for(i = 0; i < list.length; i++){%>
+      <tr>
+      <td><%= list[i].name %></p>
+      <td><%= list[i].rating %></p>
+      <td><%= list[i].reviewers %></p>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>
